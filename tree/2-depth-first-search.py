@@ -34,7 +34,8 @@ def post_order_traversal(tree):
     if tree.val:
         print(tree.val, end= " ")
 
-if __name__ == '__main__':
+
+def build_tree():
     tree = TreeNode(10)
     tree.left = TreeNode(5)
     tree.right = TreeNode(15)
@@ -42,6 +43,11 @@ if __name__ == '__main__':
     tree.left.right = TreeNode(7)
     tree.right.left = TreeNode(12)
     tree.right.right = TreeNode(20)
+
+    return tree
+
+if __name__ == '__main__':
+    tree = build_tree()
 
     print("Pre-order Traversal")
     print(pre_order_traversal(tree))
